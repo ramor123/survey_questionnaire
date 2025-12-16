@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VegeCup Product Showcase</title>
+    <style>
+        /* Reusing variables for consistency */
+        :root {
+            --primary-color: #388E3C;
+            --secondary-color: #FFB300;
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        p {
+            color: var(--text-color);
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .img-placeholder {
+            height: 200px;
+            background-color: #E8F5E9; /* Light green background for placeholders */
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .img-placeholder:hover {
+            background-color: #DCE7DC;
+        }
+        .next-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .next-btn:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✨ Discover VegeCup! Product Showcase</h2>
+        <p>Before answering the feasibility questions, take a moment to view what VegeCup offers.</p>
+
+        <div class="image-grid">
+            <div class="img-placeholder">Image Placeholder 1: Front Packaging</div>
+            <div class="img-placeholder">Image Placeholder 2: Ingredients & Nutrition</div>
+            <div class="img-placeholder">Image Placeholder 3: Prepared Meal</div>
+            <div class="img-placeholder">Image Placeholder 4: In-Store Display</div>
+            <div class="img-placeholder">Image Placeholder 5: Flavor Variant A</div>
+            <div class="img-placeholder">Image Placeholder 6: Flavor Variant B</div>
+            <div class="img-placeholder">Image Placeholder 7: Product in Hand/Size Reference</div>
+        </div>
+
+        <button class="next-btn" onclick="window.location.href='demographics.html'">
+            Continue to Demographic Profile
+        </button>
+    </div>
+</body>
+</html>
