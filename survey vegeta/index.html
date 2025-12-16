@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VegeCup Feasibility Study | Welcome</title>
+    <style>
+        :root {
+            --primary-color: #388E3C; /* Dark Green */
+            --secondary-color: #FFB300; /* Amber/Orange */
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 50px 70px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary-color);
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .welcome-message {
+            margin-bottom: 40px;
+            color: var(--text-color);
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .proceed-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s;
+        }
+        .proceed-btn:hover {
+            background-color: #FFC107;
+            transform: translateY(-2px);
+        }
+        /* Admin Button: Hidden, located at the top right */
+        .admin-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 50px; /* Small clickable area */
+            height: 50px;
+            background: none;
+            border: none;
+            color: transparent; 
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <button class="admin-btn" onclick="window.location.href='admin_login.html'">Admin</button>
+    <div class="container">
+        <div class="logo-placeholder">
+            VegeCup
+        </div>
+        <h1>Welcome to the VegeCup Feasibility Study!</h1>
+        <p class="welcome-message">
+            We are conducting a feasibility study on the introduction of **VegeCup** in the local market. 
+            Your honest participation is crucial and will be treated with strict confidentiality.
+        </p>
+        <button class="proceed-btn" onclick="window.location.href='product_showcase.html'">
+            Proceed to Product Showcase
+        </button>
+    </div>
+</body>
+</html>

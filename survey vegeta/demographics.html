@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey - Demographics</title>
+    <style>
+        :root {
+            --primary-color: #388E3C;
+            --secondary-color: #FFB300;
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+        .question-group {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fcfcfc;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        .radio-options label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .next-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .next-btn:hover {
+            background-color: #2E7D32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Section A: Personal and Demographic Profile</h2>
+        
+        <form action="survey.html" method="GET"> 
+            
+            <div class="question-group">
+                <label for="name">Name (Optional):</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="question-group">
+                <label for="city">Municipality/City (Required for Feasibility Study):</label>
+                <select id="city" name="city" required>
+                    <option value="" disabled selected>Select your city/municipality</option>
+                    <option value="Minglanilla">Minglanilla</option>
+                    <option value="Talisay City">Talisay City</option>
+                    <option value="Cebu City">Cebu City</option>
+                </select>
+            </div>
+            
+            <div class="question-group">
+                <label>Age:</label>
+                <div class="radio-options">
+                    <input type="radio" id="age_lt18" name="age" value="Below 18" required> <label for="age_lt18">Below 18</label>
+                    <input type="radio" id="age_1825" name="age" value="18–25"> <label for="age_1825">18–25</label>
+                    <input type="radio" id="age_2635" name="age" value="26–35"> <label for="age_2635">26–35</label>
+                    <input type="radio" id="age_3645" name="age" value="36–45"> <label for="age_3645">36–45</label>
+                    <input type="radio" id="age_46up" name="age" value="46 and above"> <label for="age_46up">46 and above</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Gender:</label>
+                <div class="radio-options">
+                    <input type="radio" id="gender_male" name="gender" value="Male" required> <label for="gender_male">Male</label>
+                    <input type="radio" id="gender_female" name="gender" value="Female"> <label for="gender_female">Female</label>
+                    <input type="radio" id="gender_pns" name="gender" value="Prefer not to say"> <label for="gender_pns">Prefer not to say</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Civil Status:</label>
+                <div class="radio-options">
+                    <input type="radio" id="cs_single" name="civil_status" value="Single" required> <label for="cs_single">Single</label>
+                    <input type="radio" id="cs_married" name="civil_status" value="Married"> <label for="cs_married">Married</label>
+                    <input type="radio" id="cs_others" name="civil_status" value="Others"> <label for="cs_others">Others:</label>
+                    <input type="text" id="cs_others_text" name="civil_status_others" placeholder="Please specify" style="width: auto;">
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Educational Attainment:</label>
+                <div class="radio-options">
+                    <input type="radio" id="edu_elem" name="education" value="Elementary" required> <label for="edu_elem">Elementary</label>
+                    <input type="radio" id="edu_hs" name="education" value="High School"> <label for="edu_hs">High School</label>
+                    <input type="radio" id="edu_college" name="education" value="College"> <label for="edu_college">College</label>
+                    <input type="radio" id="edu_postgrad" name="education" value="Postgraduate"> <label for="edu_postgrad">Postgraduate</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Monthly Household Income:</label>
+                <div class="radio-options">
+                    <input type="radio" id="inc_lt10k" name="income" value="Below ₱10,000" required> <label for="inc_lt10k">Below ₱10,000</label>
+                    <input type="radio" id="inc_1020k" name="income" value="₱10,001 – ₱20,000"> <label for="inc_1020k">₱10,001 – ₱20,000</label>
+                    <input type="radio" id="inc_2030k" name="income" value="₱20,001 – ₱30,000"> <label for="inc_2030k">₱20,001 – ₱30,000</label>
+                    <input type="radio" id="inc_3040k" name="income" value="₱30,001 – ₱40,000"> <label for="inc_3040k">₱30,001 – ₱40,000</label>
+                    <input type="radio" id="inc_40kup" name="income" value="₱40,001 and above"> <label for="inc_40kup">₱40,001 and above</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="next-btn">Continue to Survey Questions</button>
+        </form>
+    </div>
+</body>
+</html>

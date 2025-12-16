@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VegeCup Survey Questions</title>
+    <style>
+        :root {
+            --primary-color: #388E3C;
+            --secondary-color: #FFB300;
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .question-group {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fcfcfc;
+        }
+        p {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .option-list label, .radio-options label, .checkbox-options label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .option-list input[type="text"] {
+            margin-left: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+        }
+        .radio-options input[type="radio"], .checkbox-options input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        /* Style for Likert Scale Questions (Section E) */
+        .likert-option {
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--secondary-color); /* Orange for final action */
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.3em;
+            margin-top: 40px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VegeCup Feasibility Survey</h1>
+        <form id="surveyForm" action="thankyou.html" method="GET">
+            
+            <h2>Section B: Consumer Preferences</h2>
+
+            <div class="question-group">
+                <p>How often do you eat vegetables?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="veg_frequency" value="1-2 times a week" required> 1-2 times a week</label>
+                    <label><input type="radio" name="veg_frequency" value="3-4 times a week"> 3-4 times a week</label>
+                    <label><input type="radio" name="veg_frequency" value="5-6 times a week"> 5-6 times a week</label>
+                    <label><input type="radio" name="veg_frequency" value="Daily (7 or more times a week)"> Daily (7 or more times a week)</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>What is your usual reason for eating vegetables? (You may check more than one)</p>
+                <div class="option-list checkbox-options">
+                    <label><input type="checkbox" name="veg_reason" value="Health and nutritional benefits"> Health and nutritional benefits</label>
+                    <label><input type="checkbox" name="veg_reason" value="Convenient/Fast to prepare"> Convenient/Fast to prepare</label>
+                    <label><input type="checkbox" name="veg_reason" value="Taste/flavor"> Taste/flavor</label>
+                    <label><input type="checkbox" name="veg_reason" value="Personal preference"> Personal preference</label>
+                    <label>
+                        <input type="checkbox" name="veg_reason" value="Others"> Others:
+                        <input type="text" name="veg_reason_others" placeholder="Specify reason">
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Would you be open to trying VegeCup or other vegetable-based instant products instead of your usual instant processed meals?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="open_to_vegecup" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="open_to_vegecup" value="Maybe"> Maybe</label>
+                    <label><input type="radio" name="open_to_vegecup" value="No"> No</label>
+                    <label><input type="radio" name="open_to_vegecup" value="Recommendation from others"> Recommendation from others</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Based on your previous answer, how many VegeCup servings would you likely consume per week?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="vegecup_consumption" value="1-2 servings" required> 1-2 servings</label>
+                    <label><input type="radio" name="vegecup_consumption" value="3-4 servings"> 3-4 servings</label>
+                    <label><input type="radio" name="vegecup_consumption" value="5 or more servings"> 5 or more servings</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Which factors would influence your decision to buy VegeCup? (Check all that apply)</p>
+                <div class="option-list checkbox-options">
+                    <label><input type="checkbox" name="purchase_factor" value="Price"> Price</label>
+                    <label><input type="checkbox" name="purchase_factor" value="Taste"> Taste</label>
+                    <label><input type="checkbox" name="purchase_factor" value="Perceived health benefits of VegeCup"> Perceived health benefits of VegeCup</label>
+                    <label><input type="checkbox" name="purchase_factor" value="Brand/Packaging"> Brand/Packaging</label>
+                    <label><input type="checkbox" name="purchase_factor" value="Availability"> Availability</label>
+                    <label><input type="checkbox" name="purchase_factor" value="Recommendation from others"> Recommendation from others</label>
+                </div>
+            </div>
+
+            <h2>Section C: Technical Requirements</h2>
+
+            <div class="question-group">
+                <p>How would you prefer VegeCup to be prepared?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="vegecup_prep" value="With seasoning packets (like cup noodles)" required> With seasoning packets (like cup noodles)</label>
+                    <label><input type="radio" name="vegecup_prep" value="Pre-mixed and ready to heat"> Pre-mixed and ready to heat</label>
+                    <label><input type="radio" name="vegecup_prep" value="No preference"> No preference</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Where would you prefer to buy the VegeCup product?</p>
+                <div class="option-list checkbox-options">
+                    <label><input type="checkbox" name="purchase_location" value="Public Market"> Public Market</label>
+                    <label><input type="checkbox" name="purchase_location" value="Supermarket"> Supermarket</label>
+                    <label><input type="checkbox" name="purchase_location" value="Sari-sari Store"> Sari-sari Store</label>
+                    <label><input type="checkbox" name="purchase_location" value="Convenience Store"> Convenience Store</label>
+                    <label><input type="checkbox" name="purchase_location" value="Online delivery apps"> Online delivery apps</label>
+                    <label><input type="checkbox" name="purchase_location" value="Canteen"> Canteen</label>
+                    <label>
+                        <input type="checkbox" name="purchase_location" value="Others"> Others:
+                        <input type="text" name="purchase_location_others" placeholder="Specify location">
+                    </label>
+                </div>
+            </div>
+
+            <h2>Section D: Financial Aspects</h2>
+
+            <div class="question-group">
+                <p>How much are you willing to spend monthly for healthier instant alternatives like VegeCup (vegetable in a cup)?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="monthly_spend" value="Below ₱100" required> Below ₱100</label>
+                    <label><input type="radio" name="monthly_spend" value="₱101 – ₱200"> ₱101 – ₱200</label>
+                    <label><input type="radio" name="monthly_spend" value="₱201 – ₱300"> ₱201 – ₱300</label>
+                    <label><input type="radio" name="monthly_spend" value="₱301 – ₱400"> ₱301 – ₱400</label>
+                    <label><input type="radio" name="monthly_spend" value="More than ₱400"> More than ₱400</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>What price range would you consider affordable for one VegeCup?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="affordable_price" value="Below ₱30" required> Below ₱30</label>
+                    <label><input type="radio" name="affordable_price" value="₱30 – ₱35"> ₱30 – ₱35</label>
+                    <label><input type="radio" name="affordable_price" value="₱36 – ₱40"> ₱36 – ₱40</label>
+                    <label><input type="radio" name="affordable_price" value="More than ₱40"> More than ₱40</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Would you continue to buy VegeCup (instant vegetable in a cup) if the price is slightly higher than the instant noodles?</p>
+                <div class="radio-options">
+                    <label><input type="radio" name="buy_higher_price" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="buy_higher_price" value="Maybe"> Maybe</label>
+                    <label><input type="radio" name="buy_higher_price" value="No"> No</label>
+                </div>
+            </div>
+
+            <h2>Section E: Socio-Economic Impact</h2>
+            <p>Do you think introducing VegeCup (instant vegetable in a cup) can contribute to:</p>
+            
+            <div class="question-group">
+                <p>a. Promoting healthier eating in the community?</p>
+                <div class="radio-options">
+                    <label class="likert-option"><input type="radio" name="impact_health" value="Strongly Agree" required> Strongly Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_health" value="Agree"> Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_health" value="Neutral"> Neutral</label>
+                    <label class="likert-option"><input type="radio" name="impact_health" value="Disagree"> Disagree</label>
+                    <label class="likert-option"><input type="radio" name="impact_health" value="Strongly Disagree"> Strongly Disagree</label>
+                </div>
+            </div>
+            
+            <div class="question-group">
+                <p>b. Supporting local farmers/vegetable suppliers?</p>
+                <div class="radio-options">
+                    <label class="likert-option"><input type="radio" name="impact_farmers" value="Strongly Agree" required> Strongly Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_farmers" value="Agree"> Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_farmers" value="Neutral"> Neutral</label>
+                    <label class="likert-option"><input type="radio" name="impact_farmers" value="Disagree"> Disagree</label>
+                    <label class="likert-option"><input type="radio" name="impact_farmers" value="Strongly Disagree"> Strongly Disagree</label>
+                </div>
+            </div>
+            
+            <div class="question-group">
+                <p>c. Providing job opportunities in production/distribution?</p>
+                <div class="radio-options">
+                    <label class="likert-option"><input type="radio" name="impact_jobs" value="Strongly Agree" required> Strongly Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_jobs" value="Agree"> Agree</label>
+                    <label class="likert-option"><input type="radio" name="impact_jobs" value="Neutral"> Neutral</label>
+                    <label class="likert-option"><input type="radio" name="impact_jobs" value="Disagree"> Disagree</label>
+                    <label class="likert-option"><input type="radio" name="impact_jobs" value="Strongly Disagree"> Strongly Disagree</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>

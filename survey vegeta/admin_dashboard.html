@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        :root {
+            --primary-color: #388E3C;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F8F9FA;
+            padding: 30px;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: var(--text-color);
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .graph-placeholder {
+            height: 350px;
+            background-color: #ECEFF1;
+            border: 2px dashed #90A4AE;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            color: #607D8B;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .alert-note {
+            background-color: #FFFDE7;
+            color: #B78C00;
+            padding: 15px;
+            border: 1px solid #FFEB3B;
+            border-left: 5px solid #FFC107;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>📊 VegeCup Feasibility Survey Dashboard</h1>
+        
+        <div class="alert-note">
+            **IMPORTANT NOTE:** This is a **frontend design placeholder**. To process, store, and display real survey results here, you would need a backend database (e.g., MySQL, Firebase) and server-side code (e.g., Node.js, Python, PHP).
+        </div>
+
+        <h2>Section D: Financial Willingness Results</h2>
+        <div class="graph-placeholder">
+            [Placeholder Chart: Affordable Price Range Distribution]
+        </div>
+
+        <h2>Section B: Consumer Preference Overview</h2>
+        <div class="graph-placeholder">
+            [Placeholder Chart: Frequency of Vegetable Consumption]
+        </div>
+        
+        <h2>Summary Statistics (Static Data)</h2>
+        <p>Total Responses Collected: <strong>145</strong></p>
+        <p>Average Willingness to Pay (Affordable Price): <strong>₱34.50</strong></p>
+    </div>
+</body>
+</html>
